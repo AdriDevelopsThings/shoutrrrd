@@ -1,0 +1,11 @@
+version: '3'
+services:
+  shoutrrrd:
+    build: .
+    container_name: shoutrrrd
+    restart: on-failure
+    volumes:
+      - ./services.yaml:/services.yaml
+    ports:
+      - 8000:80
+    
