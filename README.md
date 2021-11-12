@@ -17,7 +17,7 @@ If you want to use it in your docker-compose file (for other services):
  services.yaml volume to `/services.yaml` and the port of the http server is 80.
 
 ```
-docker pull ghrc.io/adridevelopsthings/shoutrrrd:main
+docker pull ghcr.io/adridevelopsthings/shoutrrrd:main
 ```
 
 ## How to use?
