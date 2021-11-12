@@ -17,12 +17,12 @@ func ReadConfig() error {
 	}
 	yamlFile, err := ioutil.ReadFile(filepath)
 	if err != nil {
-		return fmt.Errorf("Error ReadFile configuration file %q:  %v", filepath, err)
+		return fmt.Errorf("Error ReadFile configuration file %q:  %v\n", filepath, err)
 	}
 	err = yaml.Unmarshal(yamlFile, &config)
 
 	if err != nil {
-		return fmt.Errorf("Error while unmarshal configuration file %q:  %v", filepath, err)
+		return fmt.Errorf("Error while unmarshal configuration file %q:  %v\n", filepath, err)
 	}
 	return nil
 }

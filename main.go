@@ -11,7 +11,7 @@ import (
 func main() {
 	errLoadConfig := src.LoadConfig()
 	if errLoadConfig != nil {
-		fmt.Printf("Error while loading config: %v", errLoadConfig)
+		fmt.Printf("Error while loading config: %v\n", errLoadConfig)
 		os.Exit(1)
 	}
 	http.HandleFunc("/send", src.Send)
@@ -22,6 +22,6 @@ func main() {
 	fmt.Printf("Started http server: %q\n", host)
 	err := http.ListenAndServe(host, nil)
 	if err != nil {
-		fmt.Printf("Error while starting http server %v", err)
+		fmt.Printf("Error while starting http server %v\n", err)
 	}
 }
