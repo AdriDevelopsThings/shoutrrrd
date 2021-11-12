@@ -1,7 +1,7 @@
 version: '3'
 services:
   shoutrrrd:
-    image: ghrc.io/adridevelopsthings/shoutrrrd:main
+    image: ghcr.io/adridevelopsthings/shoutrrrd:main
     container_name: shoutrrrd
     restart: on-failure
     volumes:
