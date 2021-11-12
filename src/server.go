@@ -12,7 +12,6 @@ func Send(w http.ResponseWriter, req *http.Request) {
 		req.ParseForm()
 		serviceName := req.Form.Get("service")
 		message := req.Form.Get("message")
-		fmt.Printf("%q", serviceName)
 		serviceUrl, serviceUrlOk := GetServiceUrl(serviceName)
 		if !serviceUrlOk {
 			http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
