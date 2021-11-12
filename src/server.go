@@ -23,6 +23,7 @@ func Send(w http.ResponseWriter, req *http.Request) {
 			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			fmt.Printf("Internal server error while request: %v", err)
 		} else {
+			fmt.Printf("Message %q sent to service %q.", message, serviceName)
 			w.WriteHeader(http.StatusNoContent)
 		}
 	} else {
